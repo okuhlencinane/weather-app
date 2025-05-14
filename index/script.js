@@ -4,6 +4,9 @@ function displayTemperature(response) {
   let cityElement = document.querySelector("#current-city");
   cityElement.innerHTML = response.data.city;
   temperatureElement.innerHTML = temperature;
+  let iconElement=document.querySelector(.temperature-icon);
+  iconElement.innerHTML='<img src'="$[response.data.condition.icon_url]" class="temperature-icon"/>;
+
 }
 
 function search(event) {
