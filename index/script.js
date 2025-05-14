@@ -53,5 +53,5 @@ currentDateELement.innerHTML = formatDate(currentDate);
 
 function changeIcon(response) {
 let iconElement=document.querySelector(.temperature-icon);
-iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
+iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class=temperature-icon" />`;
 }
