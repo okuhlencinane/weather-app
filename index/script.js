@@ -4,6 +4,7 @@ function displayTemperature(response) {
   let cityElement = document.querySelector("#current-city");
   cityElement.innerHTML = response.data.city;
   temperatureElement.innerHTML = temperature;
+  
 }
 function search(event) {
   event.preventDefault();
@@ -51,7 +52,4 @@ let currentDate = new Date();
 
 currentDateELement.innerHTML = formatDate(currentDate);
 
-function changeIcon(response) {
-let iconElement=document.querySelector(.temperature-icon);
-iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class=temperature-icon" />`;
-}
+
