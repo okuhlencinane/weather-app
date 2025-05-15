@@ -5,10 +5,9 @@ function displayTemperature(response) {
   let descriptionElement=document.querySelector('#description');
   let humidityElement=document.querySelector('#humidity');
   let windSpeedElement=document.querySelector('#wind-speed');
-
-  windSpeedElement.innerHTML=`${response.data.wind.speed}km/h`;
-
-  humidityElement.innerHTML=`${response.data.temperature.humidity}%;
+  let iconElement=document.querySelector('#icon');
+  windSpeedElement.innerHTML=response.data.wind.speed;
+  humidityElement.innerHTML=response.data.temperature.humidity;
   descriptionElement.innerHTML=response.data.condition.description;
   cityElement.innerHTML = response.data.city;
   temperatureElement.innerHTML = temperature;
