@@ -6,6 +6,11 @@ function displayTemperature(response) {
   let humidityElement=document.querySelector('#humidity');
   let windSpeedElement=document.querySelector('#wind-speed');
   let iconElement=document.querySelector('#icon');
+  let timeElement=document.querySelector('#current-time');
+
+   //timeElement.innerHTML = formatDate(date);
+   //timeElement.innerHTML=response.data.time
+  //iconElement.innerHTML ='<img src="${response.data.condition.icon_url}" class="icon" />`;
   windSpeedElement.innerHTML=response.data.wind.speed;
   humidityElement.innerHTML=response.data.temperature.humidity;
   descriptionElement.innerHTML=response.data.condition.description;

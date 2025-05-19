@@ -7,23 +7,32 @@ a {
   color:#f8b400;
 }
 
+.search-input{
+  background-color: #f9f7fe
+  border:none;
+  border-radius:10px;
+  width: 80%;
+  font-size: 16px;
+  padding: 15px 20px;
+}
+
 .weather-app {
   background:azure ;
   max-width: 600px;
   margin: 60px auto;
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 30px 50px rgba(87, 232, 107) 100.2% ) ;
+  box-shadow: 0 30px 50px rgba(87, 232, 107) 100.2% ;
 }
 
 header {
-  border-bottom: 1px solid  rgb(64, 64, 64) 90.2%);
+  border-bottom: 1px solid  rgb(64, 64, 64) 90.2%;
   padding-bottom: 30px;
 }
-.search-input {
+.search-form {
   background-color:azure ;
   border: none;
-  color:rgb(86, 255, 248) 78.4%);
+  color:rgb(86, 255, 248) 78.4%;
   font-size: 16px;
   padding: 20px;
   width: 75%;
@@ -33,7 +42,7 @@ header {
 .search-button {
   margin-left: 5px;
   font-size: 16px;
-  background-color:70deg, rgb(112, 206, 220) 35.6%;
+  background-color:cyan;
   color: rgb(255, 67, 5) 11.1%;
   border: none;
   padding: 20px;
@@ -92,6 +101,28 @@ footer {
   border-top: 1px solid #f9f7fe;
   text-align: center;
   padding-top: 15px;
-
   color: rgba(39, 33, 66, 0.4);
+}
+.weekday{
+  text-align: center;
+  color:#f8b400;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 10px;
+  margin-top:10px;
+}
+.week-icon{
+  font-size: 40px;
+  text-align: center;
+}
+.week-temparature{
+  text-align: center;
+  color: #f65282;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  padding: 10px 10px;
+}
+.weekday-temparature{
+  text-align:center;
 }
