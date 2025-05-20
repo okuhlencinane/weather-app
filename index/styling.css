@@ -56,6 +56,9 @@ main {
 
 .current-temperature {
   font-size: 48px;
+  top: 200px;
+  position: absolute;
+  right:500px;
 }
 
 .current-weather {
@@ -100,20 +103,12 @@ main {
 footer {
   border-top: 1px solid #f9f7fe;
   text-align: center;
-  padding-top: 15px;
+  padding-top: 100px;
   color: rgba(39, 33, 66, 0.4);
 }
 .weekday{
-  text-align: center;
-  color:#f8b400;
-  font-size: 16px;
-  line-height: 20px;
-  margin-bottom: 10px;
-  margin-top:10px;
-}
-.week-icon{
-  font-size: 40px;
-  text-align: center;
+color:aqua;
+display:flex;
 }
 .week-temparature{
   text-align: center;
@@ -121,8 +116,24 @@ footer {
   margin-top: 10px;
   display: flex;
   justify-content: center;
-  padding: 10px 10px;
+  display:block;
+  margin-bottom: 20px;
+
 }
-.weekday-temparature{
-  text-align:center;
+#week-temparatures{
+   padding: 0 10px;
+}
+.week-icon{
+   font-size: 38px;
+  text-align: center;
+}
+.week-temparature{
+  text-align: center;
+  color:#f65282;
+}
+.weekday-forecast{
+  display:flex;
+  justify-content:space-evenly;
+  margin-top: 10px;
+
 }
