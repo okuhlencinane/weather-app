@@ -5,12 +5,7 @@ function displayTemperature(response) {
   let descriptionElement=document.querySelector('#description');
   let humidityElement=document.querySelector('#humidity');
   let windSpeedElement=document.querySelector('#wind-speed');
-  let iconElement=document.querySelector('#icon');
-  let timeElement=document.querySelector('#current-time');
-
-   //timeElement.innerHTML = formatDate(date);
-   //timeElement.innerHTML=response.data.time
-  //iconElement.innerHTML ='<img src="${response.data.condition.icon_url}" class="icon" />`;
+  
   windSpeedElement.innerHTML=response.data.wind.speed;
   humidityElement.innerHTML=response.data.temperature.humidity;
   descriptionElement.innerHTML=response.data.condition.description;
@@ -28,6 +23,27 @@ function search(event) {
 
   axios.get(apiUrl).then(displayTemperature);
 }
+
+let  now = new Date();
+let time = now.toDateString();
+
+document.getElementById("current-time").innerHTML = " " +time;
+
+axios.get('https://api.openweathermap.org/data/2.5/weather?q=London&appid=37o01tf961eb43e8aa46dbf5fa9e5225')
+  .then(function(response) {
+   let weather = response.data.weather[0];
+   let iconCode = weather.icon;
+   let  iconUrl = 'http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png/' + iconCode + '.png';
+  document.getElementById('icon img').src = iconUrl;
+  document.getElementById('description').textContent = weather.main;
+  })
+   .catch(function(error) {
+    console.log('Error fetching weather data:', error);
+  });
+
+
+let weatherIcon = document.querySelector('.icon img');
+
 
 function formatDate(date) {
   let minutes = date.getMinutes();
@@ -60,4 +76,5 @@ let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
 let currentDateELement = document.querySelector("#current-date");
 let currentDate = new Date();
-currentDateELement.innerHTML = formatDate(currentDate);
+currentDateELement.innerHTML=formatDate(currentDate);
+
