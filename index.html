@@ -25,26 +25,24 @@
         </form>
       </header>
       <main>
-        <div class="current-weather">
+        <div class="weather-app-data">
           <div>
-            <h1 class="current-city" id="current-city">London </h1>
-            <p class="current-details">
-              <span id="current-time"></span>, <span id='description'></span>
-               <br />
-               <span>Humidity:</span>
-              <strong id="humidity"><span>%</span>
-              </strong>
-              <span>, Wind:</span>
-              <strong id="wind-speed">
-              <span>km/h</span> 
-              </strong>
-              </span>
-            <div class="current-temperature">
-            <span class="icon img"><img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png" alt="'_blank"/>
-            </span>
-            <span class="current-temperature-value" id="current-temperature">24</span>
-            <span class="current-temperature-unit">°C</span>
+            <h1 class="weather-app-city" id="city"></h1>
+            <p class="weather-app-details">
+              <span id="time"></span>,
+              <span id="description"></span>
+              <br />
+              Humidity: <strong id="humidity"></strong>, Wind:
+              <strong id="wind-speed"></strong>
+            </p>
           </div>
+          <div class="weather-app-temperature-container">
+            <div id="icon"></div>
+            <div class="weather-app-temperature" id="temperature"></div>
+            <div class="weather-app-unit">°C</div>
+          </div>
+        </div>
+        <div class="weather-forecast" id="forecast"></div>
       </main>
       <footer>
         <p>
